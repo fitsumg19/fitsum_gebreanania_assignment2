@@ -1,0 +1,193 @@
+import 'package:flutter/material.dart';
+
+class Stack_Body extends StatelessWidget {
+  const Stack_Body({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
+    return Stack(
+      children: [
+        Column(
+          children: [
+            Container(
+              width: width,
+              height: height / 3,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: ExactAssetImage(
+                    'images/backgroundDish.png',
+                  ),
+                  fit: BoxFit.fitWidth,
+                ),
+                shape: BoxShape.rectangle,
+              ),
+            ),
+            Container(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: ExactAssetImage(
+                    'images/backgroundDish.png',
+                  ),
+                  fit: BoxFit.fitHeight,
+                ),
+                shape: BoxShape.rectangle,
+              ),
+              child: Container(
+                width: width,
+                height: height / 1.5,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFFFFECBB), Colors.white],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                    stops: [
+                      0.4,
+                      1,
+                    ],
+                  ),
+                  color: const Color(0xFF998474),
+                  border: Border.all(
+                    color: Colors.black,
+                    width: 0,
+                  ),
+                  borderRadius: const BorderRadius.only(
+                    topLeft: Radius.circular(40),
+                    topRight: Radius.circular(40),
+                  ),
+                ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const SizedBox(height: 130),
+                    Material(
+                      elevation: 10,
+                      borderRadius: const BorderRadius.all(
+                        Radius.circular(20),
+                      ),
+                      shadowColor: Colors.orange,
+                      child: Container(
+                        width: 350,
+                        height: 250,
+                        decoration: BoxDecoration(
+                          color: Colors.white.withOpacity(0.5),
+                          border: Border.all(
+                            color: Colors.black,
+                            width: 1.5,
+                          ),
+                          borderRadius: const BorderRadius.all(
+                            Radius.circular(20),
+                          ),
+                        ),
+                        child: Padding(
+                          padding: const EdgeInsets.fromLTRB(16, 0, 16, 0),
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.start,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              SizedBox(
+                                height: 15,
+                              ),
+                              Text(
+                                "Nabeyaki",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 30,
+                                ),
+                              ),
+                              Text(
+                                "Hotpot ramen",
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 20,
+                                ),
+                              ),
+                              // SizedBox(
+                              //   height: 20,
+                              // ),
+                              Text(
+                                  "In Japanese, a nabe is a heavy clay pot with a lid in which stew is usually made. Yaki means to cook over a fire. Basically, Nabeyaki is a Japanese word that means steamboat or hotpot. And ramen, as well known, is a noodle that is usually served in a broth with bits of meat and vegetables. Nabeyaki ramen is stewed in an earthen pot, so it can stay hot until the end."),
+                            ],
+                          ),
+                        ),
+                        // margin: const EdgeInsets.all(50),
+                        // margin: const EdgeInsets.only(
+                        // left: 50, right: 50, top: 100, bottom: 100),
+                      ),
+                    ),
+                    const SizedBox(
+                      height: 50,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: 80.0,
+                          height: 60.0,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: const ButtonStyle(
+                              backgroundColor: MaterialStatePropertyAll<Color>(
+                                  Color(0xFFAF9166)),
+                            ),
+                            child: const Text(
+                              '-  1  +',
+                              style: TextStyle(
+                                color: Colors.black,
+                              ),
+                            ),
+                          ),
+                        ),
+                        const SizedBox(
+                          width: 50,
+                        ),
+                        Container(
+                          width: 150.0,
+                          height: 60.0,
+                          child: ElevatedButton(
+                            onPressed: () {},
+                            style: const ButtonStyle(
+                                backgroundColor:
+                                    MaterialStatePropertyAll<Color>(
+                                        Color(0xFF010100))),
+                            child: const Text(
+                              'Add to cart',
+                              style: TextStyle(
+                                color: Colors.white,
+                              ),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ],
+        ),
+        Positioned(
+          top: height * .27 - (width * .2),
+          left: width * .15,
+          child: Material(
+            elevation: 20,
+            borderRadius: BorderRadius.circular(144),
+            shadowColor: Colors.brown,
+            child: Container(
+              height: width * .7,
+              width: width * .7,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: ExactAssetImage('images/dishCircular.png'),
+                  fit: BoxFit.fitWidth,
+                ),
+                shape: BoxShape.circle,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}

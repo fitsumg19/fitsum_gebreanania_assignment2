@@ -1,5 +1,19 @@
-# movies_app
+# ramen_restaurant
 
-Simple movie app with dummy data. (Most widget are slivers widgets).
+A new Flutter project.
 
-![image1](https://user-images.githubusercontent.com/89051381/152047338-0a9fd3a2-12b1-4a3a-9b21-ebf6037d82c7.jpeg)
+## Getting Started
+
+This project is a starting point for a Flutter application.
+
+A few resources to get you started if this is your first Flutter project:
+
+- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
+- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+
+For help getting started with Flutter development, view the
+[online documentation](https://docs.flutter.dev/), which offers tutorials,
+samples, guidance on mobile development, and a full API reference.
+
+# Text prompt that i have generated: 
+Design a specialized mobile app for a japanese restaurant
